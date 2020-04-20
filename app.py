@@ -17,4 +17,11 @@ def libros(isbn):
 	        return render_template("libros.html",libro=libro)
     abort(404)
 
+@app.route('/categoria/<categoria>',methods=["GET","POST"])
+def categoria(categoria):
+    for libro in datos:
+        if "categories" in libro.keys() and categoria in libro["categories"]:
+	        return render_template("categorias.html",libro=libro,categoria=categoria)
+    abort(404)
+
 app.run(debug=False)
