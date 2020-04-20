@@ -23,5 +23,10 @@
             </ul>
             {% endfor -%}
         <p><strong>Categorías:</strong> {{libro.categories}}</p>
+            {% for categoria in libro.categories -%}
+            <ul>
+                <li><p>{{categoria}}</p></li>
+            </ul>
+            {% endfor -%}
     </body>
 </html>
