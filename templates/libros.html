@@ -13,8 +13,15 @@
             <h2>Este libro no se ha publicado.</h2>
         {% endif -%}
         <p><strong>Número de páginas:</strong> {{libro.pageCount}}</p>
-        <p><strong>Descripción::</strong> {{libro.shortDescription}}</p>
-        <p><strong>Autores:</strong> {{libro.authors}}</p>
+        {% if libro.shortDescription -%}
+            <p><strong>Descripción:</strong> {{libro.shortDescription}}</p>
+        {% endif -%}
+        <p><strong>Autores:</strong></p>
+            {% for autor in libro.authors -%}
+            <ul>
+                <li><p>{{autor}}</p></li>
+            </ul>
+
         <p><strong>Categorías:</strong> {{libro.categories}}</p>
     </body>
 </html>
