@@ -21,7 +21,7 @@ def libros(isbn):
 def categoria(categoria):
     for libro in datos:
         if "categories" in libro.keys() and categoria in libro["categories"]:
-	        return render_template("categorias.html",libro=libro,categoria=categoria)
+	        return render_template("categorias.html",libro=datos,categoria=categoria)
     abort(404)
 
 app.run(debug=False)
