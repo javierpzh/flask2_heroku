@@ -4,7 +4,7 @@ from flask import Flask, render_template,abort
 app = Flask(__name__)	
 
 with open("books.json") as fichero:
-    datos=jon.load(fichero)
+    datos=json.load(fichero)
 
 @app.route('/',methods=["GET","POST"])
 def inicio():
