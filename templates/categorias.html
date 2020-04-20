@@ -9,10 +9,10 @@
         <ul>
             {% for libro in libros -%}
                 {% if categories in libro.categories -%}
-                    {% if elem.isbn %}
-                        <li><a href="/libro/{{elem.isbn}}">{{elem.title}}</a></li>
+                    {% if libro.isbn %}
+                        <li><a href="/libro/{{elem.isbn}}">{{libro.title}}</a></li>
                     {% else %}
-                        <li><a href="/">{{elem.title}} (No tiene ISBN)</a></li>
+                        <li><a href="/">{{libro.title}} (No tiene ISBN)</a></li>
                     {% endif %}
                         <br>
                 {% endif %}
