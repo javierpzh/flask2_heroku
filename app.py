@@ -15,8 +15,7 @@ def libros(isbn):
     for libro in datos:
         if "isbn" in libro.keys() and isbn==libro["isbn"]:
 	        return render_template("libros.html",libro=libro)
-        else:
-            abort(404)
+    abort(404)
 
 
 app.run(debug=False)
