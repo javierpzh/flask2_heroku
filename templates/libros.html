@@ -9,8 +9,8 @@
         {% if libro.thumbnailUrl -%}
             <img src="{{libro.thumbnailUrl}}" alt="Imagen"/>
         {% endif -%}
-        {% if libro.status == "MEAP" %}
-            <h2>Este libro no se ha publicado.</h2>
+        {% if libro.status=="MEAP" %}
+            <h2>ESTE LIBRO NO SE HA PUBLICADO.</h2>
         {% endif -%}
         <p><strong>Número de páginas:</strong> {{libro.pageCount}}</p>
         {% if libro.shortDescription -%}

@@ -17,5 +17,4 @@ def libros(isbn):
 	        return render_template("libros.html",libro=libro)
     abort(404)
 
-
 app.run(debug=False)
