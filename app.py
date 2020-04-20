@@ -1,7 +1,7 @@
 import os
 import json
 from flask import Flask, render_template,abort
-app = Flask(__name__)	
+app = Flask(__name__)
 
 with open("books.json") as fichero:
     datos=json.load(fichero)
