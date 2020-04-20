@@ -13,7 +13,10 @@ def inicio():
 @app.route('/libro/<isbn>',methods=["GET","POST"])
 def libros(isbn):
     for libro in datos:
-        if "isbn" in libro.keys() and isbn==libro["isbn"]:
+        if isbn==libro["isbn"]:
 	        return render_template("libros.html",libro=libro)
+        else:
+            abort(404)
+
 
 app.run(debug=False)
