@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Libros</title>
+</head>
+<body>
+    <h1>{{libro.title}}</h1>
+    {% if libro.thumbnailUrl -%}
+        <img src="{{libro.thumbnailUrl}}" />
+    {% endif -%}
+    {% if libro.status == "MEAP" %}
+        <h2>Este libro no se ha publicado.</h2>
+    {% endif -%}
+    <p>Número de páginas: {{libro.pageCount}}</p>
+    <p>Descripción: {{libro.shortDescription}}</p>
+    <p>Autores: {{libro.authors}}</p>
+    <p>Categorías: {{libro.categories}}</p>
+</body>
+</html>
